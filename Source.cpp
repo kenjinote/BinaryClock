@@ -33,7 +33,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 				{
 					const int x = WIDTH*(2 * i - j / 4 + 1);
 					const int y = WIDTH*(3 - j % 4);
-					if (!((n >> j) & 0x1))
+					if (!((n >> j) & 1))
 					{
 						g.FillRectangle(&SolidBrush(Color::Black), x, y, WIDTH, WIDTH);
 						g.ExcludeClip(Rect(x, y, WIDTH, WIDTH));

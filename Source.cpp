@@ -31,10 +31,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 				const int n = ((WORD*)&st)[4 + i];
 				for (int j = 0; j < 8; ++j)
 				{
-					const int x = WIDTH*(2 * i - j / 4 + 1);
-					const int y = WIDTH*(3 - j % 4);
 					if (!((n >> j) & 1))
 					{
+						const int x = WIDTH*(2 * i - j / 4 + 1);
+						const int y = WIDTH*(3 - j % 4);
 						g.FillRectangle(&SolidBrush(Color::Black), x, y, WIDTH, WIDTH);
 						g.ExcludeClip(Rect(x, y, WIDTH, WIDTH));
 					}

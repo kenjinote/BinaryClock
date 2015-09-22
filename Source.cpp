@@ -12,11 +12,9 @@ TCHAR szClassName[] = TEXT("Window");
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-	static HBRUSH hBrush;
 	switch (msg)
 	{
 	case WM_CREATE:
-		hBrush = CreateSolidBrush(RGB(32, 32, 64));
 		SetTimer(hWnd, 0x1234, 1000, 0);
 		break;
 	case WM_TIMER:

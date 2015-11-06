@@ -1,4 +1,3 @@
-#define UNICODE
 #pragma comment(lib,"gdiplus")
 #pragma comment(lib,"dwmapi")
 #include <windows.h>

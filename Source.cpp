@@ -1,9 +1,11 @@
 #pragma comment(lib,"gdiplus")
 #pragma comment(lib,"dwmapi")
+
 #include <windows.h>
 #include <dwmapi.h>
 #include <math.h>
 #include <gdiplus.h>
+
 using namespace Gdiplus;
 
 #define WIDTH 50
@@ -97,5 +99,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int 
 		DispatchMessage(&msg);
 	}
 	GdiplusShutdown(gdiToken);
-	return msg.wParam;
+	return (int)msg.wParam;
 }
